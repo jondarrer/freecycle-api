@@ -1,0 +1,17 @@
+{
+  "defaultEnv": { "ENV": "NODE_ENV" },
+  "dev": {
+    "driver": "pg",
+    "user": "jondarrer",
+    "password": "",
+    "host": "localhost",
+    "database": "freecycle"
+  },
+  "prod": {
+    "driver": "pg",
+    "user": { "ENV": "FCAPI_DB_USERNAME" },
+    "password": { "ENV": "FCAPI_DB_PASSWORD" },
+    "host": { "ENV": "FCAPI_DB_HOST" },
+    "database": { "ENV": "FCAPI_DB_NAME" }
+  }
+}

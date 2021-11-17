@@ -1,0 +1,46 @@
+{
+  "name": "freecycle-api",
+  "version": "1.0.0",
+  "description": "API for Freecycle posts",
+  "main": "src/index.js",
+  "scripts": {
+    "lint:js": "eslint src/ --cache",
+    "test": "jest",
+    "build": "webpack",
+    "db-migrate-up": "db-migrate up",
+    "db-migrate-down": "db-migrate down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondarrer/freecycle-api.git"
+  },
+  "author": "Jonathan Darrer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondarrer/freecycle-api/issues"
+  },
+  "homepage": "https://github.com/jondarrer/freecycle-api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.2.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "regenerator-runtime": "^0.13.9",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "source-map-support": "^0.5.20"
+  }
+}
