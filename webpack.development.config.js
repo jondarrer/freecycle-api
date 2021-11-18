@@ -1,11 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
-const ESLintPlugin = require('eslint-webpack-plugin');
+// const ESLintPlugin = require('eslint-webpack-plugin');
 
 const nodeModules = {};
-fs
-  .readdirSync('node_modules')
+fs.readdirSync('node_modules')
   .filter(function (x) {
     return ['.bin'].indexOf(x) === -1;
   })
@@ -33,9 +32,9 @@ module.exports = {
   },
   externals: nodeModules,
   plugins: [
-    new ESLintPlugin({
-      emitWarning: true,
-    }),
+    // new ESLintPlugin({
+    //   emitWarning: true,
+    // }),
     new webpack.BannerPlugin({
       banner: 'require("source-map-support").install();',
       raw: true,

@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   pg: {
     host: process.env.FCAPI_DB_HOST,
     user: process.env.FCAPI_DB_USERNAME,
@@ -6,3 +6,5 @@ module.exports = {
     database: process.env.FCAPI_DB_NAME,
   },
 };
+
+export default config;

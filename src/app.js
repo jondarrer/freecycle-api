@@ -13,6 +13,8 @@ const app = express();
 
 app.use(cors());
 
+console.log({ config });
+
 const pool = new Pool(config.pg);
 
 app.get('/api/', (req, res) => {

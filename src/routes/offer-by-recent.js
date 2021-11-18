@@ -1,11 +1,10 @@
-// @flow
 import { queryDb } from '../utils/query-db';
-require('../types');
+import types from '../types';
 
 /**
- * 
- * @param {import('../types').Pool} pool 
- * @param {*} minPostId 
+ *
+ * @param {import('../types').Pool} pool
+ * @param {*} minPostId
  * @returns {Promise<Array<import('../types').Result>>}
  */
 const offerByRecent = async (pool, minPostId) => {
@@ -14,7 +13,7 @@ const offerByRecent = async (pool, minPostId) => {
   if (minPostId > 0) {
     query = `SELECT * FROM offers WHERE id < ${minPostId} ORDER BY id DESC LIMIT 100;`;
   }
-  return queryDb(pool, query).then(res => res.rows);
+  return queryDb(pool, query).then((res) => res.rows);
 };
 
 export default offerByRecent;

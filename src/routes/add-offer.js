@@ -1,5 +1,5 @@
 import { queryDb } from '../utils/query-db';
-require('../types');
+import types from '../types';
 
 /**
  * Adds an offer
@@ -14,7 +14,7 @@ const addOffer = async (pool, offer, now) => {
   return queryDb(
     pool,
     `INSERT INTO offers (id, group_id, inserted_at, updated_at) VALUES (${offer.postId}, '${offer.groupId}', ${nowStr}, ${nowStr});`
-  ).then(res => res.rows[0]);
+  ).then((res) => res.rows[0]);
 };
 
 export default addOffer;

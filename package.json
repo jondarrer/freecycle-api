@@ -6,6 +6,7 @@
   "scripts": {
     "lint:js": "eslint src/ --cache",
     "test": "jest",
+    "start": "node ./dist/bundle.js",
     "build": "webpack",
     "db-migrate-up": "db-migrate up",
     "db-migrate-down": "db-migrate down"
